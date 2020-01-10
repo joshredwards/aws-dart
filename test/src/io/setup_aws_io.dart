@@ -1,19 +1,17 @@
-import 'package:test/test.dart';
+part of awsdart_io_unit;
 
-import '../../../lib/io.dart';
+setupAWSIOTest() => group('setupAWSIO', () {
+      test('sets Aws.requester to ioRequester', () {
+        // Setup
+        AWS.requester = null;
 
-void main() {
-  test('sets Aws.requester to ioRequester', () {
-    // Setup
-    AWS.requester = null;
+        // Action
+        setupAWSIO();
 
-    // Action
-    setupAWSIO();
+        // Assertions
+        expect(AWS.requester, same(ioRequester));
 
-    // Assertions
-    expect(AWS.requester, same(ioRequester));
-
-    // Clean up
-    AWS.requester = null;
-  });
-}
+        // Clean up
+        AWS.requester = null;
+      });
+    });

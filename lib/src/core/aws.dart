@@ -64,8 +64,6 @@ class AWS {
       req = _sign.sign2(req);
     }
 
-    print(req.headers);
-
     return requester(req).then((res) {
       //logging
       var log = '${req.uri} ${res.statusCode} ${res.statusString}';
