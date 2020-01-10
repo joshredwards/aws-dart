@@ -2,6 +2,8 @@ name: awsdart
 version: 0.0.1
 author: Joshredwards
 description: A library to implement the Amazon Web Services into Dart
+environment:
+  sdk: ">=2.0.0-dev.68.0 <3.0.0"
 dependencies:
   convert: any
   crypto: any
