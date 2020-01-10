@@ -1,0 +1,10 @@
+name: awsdart
+version: 0.0.1
+author: Joshredwards
+description: A library to implement the Amazon Web Services into Dart
+dependencies:
+  convert: any
+  crypto: any
+  intl: any
+  xml: any
+  test: ^1.11.0
