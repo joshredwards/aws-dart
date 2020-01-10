@@ -1,9 +1,4 @@
-import 'dart:collection';
-import 'dart:convert';
-import 'package:awsdart/src/core/utils.dart';
-import 'package:crypto/crypto.dart';
-import 'package:intl/intl.dart';
-import 'package:awsdart/src/core/http.dart';
+part of awsdart;
 
 class Signature {
   static final ALGORITHM = 'AWS4-HMAC-SHA256';

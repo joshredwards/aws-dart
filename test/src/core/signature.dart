@@ -1,5 +1,4 @@
-import 'package:awsdart/src/core/http.dart';
-import 'package:awsdart/src/core/signature.dart';
+import 'package:awsdart/core.dart';
 import 'package:test/test.dart';
 
 void main() {

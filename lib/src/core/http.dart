@@ -1,3 +1,5 @@
+part of awsdart;
+
 typedef Future<Response> Requester(Request req);
 
 class Request {

@@ -1,4 +1,4 @@
-import 'package:convert/convert.dart';
+part of awsdart;
 
 String bytesToHex(List<int> bytes) => hex.encode(bytes);
 

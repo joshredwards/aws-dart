@@ -1,8 +1,4 @@
-import 'package:awsdart/src/core/http.dart';
-import 'package:awsdart/src/core/signature.dart';
-import 'package:awsdart/src/core/utils.dart';
-import 'package:crypto/crypto.dart';
-import 'package:intl/intl.dart';
+part of awsdart;
 
 class AWS {
   static Requester requester;
@@ -46,7 +42,7 @@ class AWS {
     }
 
     req.headers.putIfAbsent(
-        'x-amz-date', () => DateFormat("yyyyMMddTHJHmmss'Z'").format(time));
+        'x-amz-date', () => DateFormat("yyyyMMddTHHmmss'Z'").format(time));
 
     // Use the x-amz-content-sha256 if it is present
     if (!req.headers.containsKey('x-amz-content-sha256')) {
@@ -67,6 +63,8 @@ class AWS {
     } else {
       req = _sign.sign2(req);
     }
+
+    print(req.headers);
 
     return requester(req).then((res) {
       //logging
